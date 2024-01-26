@@ -14,7 +14,7 @@
 # ======================================================================
 cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
-find_package(cetmodules 2.29.06 REQUIRED)
+find_package(cetmodules 3.24.00 REQUIRED)
 project(nurandom VERSION 1.11.01 LANGUAGES CXX)
 
 include(CetCMakeEnv)
@@ -22,7 +22,7 @@ cet_cmake_env()
 
 cet_set_compiler_flags(DIAGS CAUTIOUS WERROR
   NO_UNDEFINED
-  EXTRA_FLAGS -pedantic 
+  EXTRA_FLAGS -pedantic
   $<$<COMPILE_LANGUAGE:CXX>:-Wno-unused-local-typedefs
   -Wno-variadic-macros>)
 
